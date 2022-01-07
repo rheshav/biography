@@ -1,7 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 
-// condition sederhana
+/* control flow
+// task condition sederhana
 let nilai = prompt(`masukkan nilai `);
 
 if (nilai >= 90 && nilai <= 100) {
@@ -17,6 +18,41 @@ if (nilai >= 90 && nilai <= 100) {
 }
 
 // end of condition sederhana
+*/
+
+// function declaration
+function deklarasi() {
+  console.log('deklarasi');
+}
+
+// function expression
+const expression = function () {
+  console.log('expression');
+};
+deklarasi();
+expression();
+console.log(deklarasi);
+console.log(expression);
+
+// Arrow function
+const arrow = () => {
+  console.log(`arrow`);
+};
+
+arrow();
+console.log(arrow());
+
+//Param
+function tambah(a, b) {
+  alert(`${a} + ${b} = ${a + b}`);
+}
+
+tambah(10, 20);
+
+const kali = function (a, b) {
+  alert(`${a} * ${b} = ${a * b}`);
+};
+kali(10, 20);
 
 function App() {
   return (
