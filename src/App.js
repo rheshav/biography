@@ -18,7 +18,6 @@ if (nilai >= 90 && nilai <= 100) {
 }
 
 // end of condition sederhana
-*/
 
 // function declaration
 function deklarasi() {
@@ -53,6 +52,7 @@ const kali = function (a, b) {
   alert(`${a} * ${b} = ${a * b}`);
 };
 kali(10, 20);
+*/
 
 function App() {
   return (
@@ -71,3 +71,51 @@ function App() {
 }
 
 export default App;
+
+//game tebak angka
+alert`Silahkan bermain`;
+
+let player1 = prompt`Player 1 Silahkan masukkan Angka dari 1-2`;
+let player2 = prompt`Player 2 Silahkan masukkan Angka dari 1-2`;
+let acak = Math.floor(Math.random() * 2) + 1;
+
+console.log(acak); //untuk cek value acak
+console.log(`angka dari Player 1 = ` + player1);
+
+//kondisi permainan
+if (player1 == acak && player1 != player2) {
+  alert`Player 1 Win`;
+} else if (player2 == acak && player1 != player2) {
+  alert`Player 2 Win`;
+} else if (player1 == player2) {
+  alert`Tebakan tidak boleh sama`;
+} else if (player1 <= 0) {
+  alert`tebakan tidak boleh kurang dari 0`;
+} else if (player2 <= 0) {
+  alert`tebakan tidak boleh kurang dari 0`;
+} else if (player1 > 2) {
+  alert`tebakan tidak boleh lebih dari 2`;
+} else if (player2 > 2) {
+  alert`tebakan tidak boleh lebih dari 2`;
+} else {
+  alert`silahkan masukkan nilai yang valid`;
+}
+
+alert(`Player 1 memasukkan angka  ${player1}`);
+alert`contoh tanpa kurung`;
+
+// alert ('Player 1 memasukkan angka' + player1);
+// alert ('Player 1 memasukkan angka' + player1);
+
+//function untuk looping permainan
+let game = () => {
+  for (let i = 0; i <= 5; i++) {
+    console.log('test');
+  }
+};
+
+function tambah(a, b) {
+  alert(`${a} + ${b} = ${a + b}`);
+}
+
+tambah(10, 20);
