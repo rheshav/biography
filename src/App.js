@@ -101,21 +101,18 @@ if (player1 == acak && player1 != player2) {
   alert`silahkan masukkan nilai yang valid`;
 }
 
-alert(`Player 1 memasukkan angka  ${player1}`);
-alert`contoh tanpa kurung`;
+alert(`Player 1 memasukkan angka  ${player1}
+Player 2 memasukkan angka ${player1}
+Angka yang keluar ${acak}`);
 
 // alert ('Player 1 memasukkan angka' + player1);
 // alert ('Player 1 memasukkan angka' + player1);
 
 //function untuk looping permainan
-let game = () => {
-  for (let i = 0; i <= 5; i++) {
-    console.log('test');
+let ronde = () => {
+  for (let i = 1; i <= 5; i++) {
+    alert('ronde ke ' + i);
   }
 };
 
-function tambah(a, b) {
-  alert(`${a} + ${b} = ${a + b}`);
-}
-
-tambah(10, 20);
+ronde();
