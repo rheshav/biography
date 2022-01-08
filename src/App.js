@@ -73,10 +73,12 @@ function App() {
 export default App;
 
 //game tebak angka
-alert(`Silahkan bermain`);
+alert(`Silahkan bermain tebak angka antara 1 atau 2
+Permainan akan dilakukan dalam 3 ronde
+`);
 
 let ronde = () => {
-  for (let i = 1; i <= 5; i++) {
+  for (let i = 1; i <= 3; i++) {
     alert('ronde ke ' + i);
     let player1 = prompt(`Player 1 Silahkan masukkan Angka antara 1-2`);
     let player2 = prompt(`Player 2 Silahkan masukkan Angka antara 1-2`);
