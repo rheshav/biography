@@ -98,7 +98,7 @@ let ronde = () => {
       alert(`Tidak ada yang menebak dengan benar`);
     } else if (player1 <= 0 || player2 <= 0) {
       alert(`tebakan tidak boleh kurang dari 0`);
-    } else if (player1 > 32 || player2 > 3) {
+    } else if (player1 > 3 || player2 > 3) {
       alert(`tebakan tidak boleh lebih dari 3`);
     } else {
       alert(`silahkan masukkan nilai yang valid`);
