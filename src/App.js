@@ -18,3 +18,23 @@ function App() {
 }
 
 export default App;
+
+let kelereng = `merah`; //global scope
+let outerfunction = () => {
+  let kelereng = `kuning`;
+  // return () => {
+  //   console.log(kelereng);
+  // };
+
+  // let innerfunction = () => {
+  //   console.log(kelereng);
+  // };
+  // return innerfunction();
+  // innerfunction();
+  return function innerfunction() {
+    console.log(kelereng);
+  };
+};
+// innerfunction();
+// outerfunction();
+console.dir(outerfunction());
