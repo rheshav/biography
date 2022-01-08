@@ -80,9 +80,9 @@ Permainan akan dilakukan dalam 3 ronde
 let ronde = () => {
   for (let i = 1; i <= 3; i++) {
     alert('ronde ke ' + i);
-    let player1 = prompt(`Player 1 Silahkan masukkan Angka antara 1-2`);
-    let player2 = prompt(`Player 2 Silahkan masukkan Angka antara 1-2`);
-    let acak = Math.floor(Math.random() * 2) + 1;
+    let player1 = prompt(`Player 1 Silahkan masukkan Angka antara 1-3`);
+    let player2 = prompt(`Player 2 Silahkan masukkan Angka antara 1-3`);
+    let acak = Math.floor(Math.random() * 3) + 1;
 
     console.log(acak); //untuk cek value acak
     console.log(`angka dari Player 1 = ` + player1); //cek value player 1
@@ -94,14 +94,12 @@ let ronde = () => {
       alert(`Player 2 Win`);
     } else if (player1 == player2) {
       alert(`Tebakan tidak boleh sama`);
-    } else if (player1 <= 0) {
+    } else if (player1 != acak && player2 != acak) {
+      alert(`Tidak ada yang menebak dengan benar`);
+    } else if (player1 <= 0 || player2 <= 0) {
       alert(`tebakan tidak boleh kurang dari 0`);
-    } else if (player2 <= 0) {
-      alert(`tebakan tidak boleh kurang dari 0`);
-    } else if (player1 > 2) {
-      alert(`tebakan tidak boleh lebih dari 2`);
-    } else if (player2 > 2) {
-      alert(`tebakan tidak boleh lebih dari 2`);
+    } else if (player1 > 3 || player2 > 3) {
+      alert(`tebakan tidak boleh lebih dari 3`);
     } else {
       alert(`silahkan masukkan nilai yang valid`);
     }
@@ -112,12 +110,3 @@ Angka yang keluar ${acak}`);
   }
 };
 ronde();
-// alert ('Player 1 memasukkan angka' + player1);
-// alert ('Player 1 memasukkan angka' + player1);
-
-//function untuk looping permainan
-// let ronde = () => {
-//   for (let i = 1; i <= 5; i++) {
-//     alert('ronde ke ' + i);
-//   }
-// };
