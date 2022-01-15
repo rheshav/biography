@@ -1,40 +1,36 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import Lib from './Lib';
+import { Container, Row, Col } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
+  let title = `Mini Library from Eduwork`;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
+    <div>
+      <p>{title}</p>
+      <Lib></Lib>
     </div>
   );
 }
 
 export default App;
+class Orang {
+  constructor() {
+    console.log(`this is constructor`);
+  }
+  // let arrow = () => {
+  //   console.log(`arrow function`);
+  // }
+  expression() {
+    console.log(`expression function`);
+  }
+  static statik() {
+    console.log(`ini fungsi static`);
+  }
+}
 
-let kelereng = `merah`; //global scope
-let outerfunction = () => {
-  let kelereng = `kuning`;
-  // return () => {
-  //   console.log(kelereng);
-  // };
-
-  // let innerfunction = () => {
-  //   console.log(kelereng);
-  // };
-  // return innerfunction();
-  // innerfunction();
-  return function innerfunction() {
-    console.log(kelereng);
-  };
-};
-// innerfunction();
-// outerfunction();
-console.dir(outerfunction());
+let person = new Orang();
+// console.log(Orang().expression);
+console.log(person.expression());
+console.log(Orang.statik());
