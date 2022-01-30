@@ -15,23 +15,20 @@ function App() {
   );
 }
 
-export default App;
-class Orang {
-  constructor() {
-    console.log(`this is constructor`);
+function Hitung(param1, param2, callback) {
+  let result = param1 + param2;
+  if (typeof callback === 'function') {
+    result = callback(param1, param2);
   }
-  // let arrow = () => {
-  //   console.log(`arrow function`);
-  // }
-  expression() {
-    console.log(`expression function`);
-  }
-  static statik() {
-    console.log(`ini fungsi static`);
-  }
+  return result;
 }
 
-let person = new Orang();
-// console.log(Orang().expression);
-console.log(person.expression());
-console.log(Orang.statik());
+// let a = Callback(1, 2);
+// console.log(a);
+
+let b = Hitung(1, 2, function (x, y) {
+  return x * y;
+});
+console.log(b);
+
+export { App, Hitung };
