@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import { App, Hitung } from './App';
 import reportWebVitals from './reportWebVitals';
+import Render from './Callback';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Render />
   </React.StrictMode>,
   document.getElementById('root')
 );
